@@ -1,6 +1,7 @@
 {
   "name": "npm",
   "private": true,
+  "homepage": "https://jaimechurch.github.io/Blog/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
