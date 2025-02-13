@@ -1,29 +1,15 @@
 import React from 'react';
-import { Box, Paper } from '@mui/material';
 import './App.css';
+import SimplePaper from './SimplePaper';
+import MotionPath from './MotionPath';
+import Drag from './SpringFollow';
+import UseAnimationFrame from './CubeAnimation';
 
-function SimplePaper({ children }) {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 1,
-        margin: 1,
-      }}
-    >
-      <Paper elevation={2} sx={{ padding: 2 }}>
-        {children}
-      </Paper>
-    </Box>
-  );
-}
-
-export default function App() {
+function App() {
   return (
     <>
       <h1>React Blog</h1>
+
       <SimplePaper>
         <h3>To Do:</h3>
         <ul>
@@ -40,23 +26,51 @@ export default function App() {
       <SimplePaper>
         <h3>Week 1</h3>
         <ul>
-          <li>Started new PMBOK flashcard app.</li>
+          <li>Started new PMP flashcard app.</li>
         </ul>
       </SimplePaper>
 
       <SimplePaper>
         <h3>Week 2</h3>
         <ul>
-          <li>Started new PMBOK flashcard app.</li>
+          <li>Created new react app.</li>
+          <li>Added Flashcard.jsx and Flashcard.css. </li>
+          <li>Added styling and placeholders for questions/answers.</li>
         </ul>
       </SimplePaper>
 
       <SimplePaper>
-        <h3>Week 2</h3>
+        <h3>Week 3</h3>
         <ul>
-          <li>Started new PMBOK flashcard app.</li>
+          <li>Moved questions to array in separate file. </li>
+          <li>Added previous, next, and flip buttons. </li>
+          <li>Flip displays answer.</li>
         </ul>
       </SimplePaper>
+
+      <SimplePaper>
+        <h3>Week 4</h3>
+        <ul>
+          <li>Moved questions to array in separate file. </li>
+          <li>Added previous, next, and flip buttons. </li>
+          <li>Flip displays answer.</li>
+        </ul>
+      </SimplePaper>
+
+      <SimplePaper>
+        <h3>Week 6</h3>
+        <MotionPath />
+      </SimplePaper>
+
+      <SimplePaper>
+        <h3>Class Demo</h3>
+        <UseAnimationFrame/>
+      </SimplePaper>
+
+      <Drag />
+       
     </>
   );
 }
+
+export default App;
